@@ -49,3 +49,12 @@ for (let i =0; i < hourArray.length;i++){
 }
 }
 
+//Function for saving content in the textarea of a timeblock 
+function saveCalendar(event) {
+    event.preventDefault();
+    let saved = $(event.currentTarget);
+    let targetTxt = saved.siblings("textarea");
+    let targetTimeblock = targetTxt.data("hour");
+    localStorage.setItem("timeblock " + targetTimeblock, targetTxt.val());
+}
+save.on("click", saveCalendar);
