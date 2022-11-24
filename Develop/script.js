@@ -1,17 +1,16 @@
 //Container elements
 var save = $(".saveBtn");
 var containerEl = $(".container");
-var hour9AM = $("9AM");
-var hour10AM = $("10AM");
-var hour11AM = $("11AM");
-var hour12PM = $("12PM");
-var hour1PM = $("1PM");
-var hour2PM = $("2PM");
-var hour3PM= $("3PM");
-var hour4PM = $("4PM");
-var hour5PM = $("5PM");
+var hour9AM = $("#9AM");
+var hour10AM = $("#10AM");
+var hour11AM = $("#11AM");
+var hour12PM = $("#12PM");
+var hour1PM = $("#1PM");
+var hour2PM = $("#2PM");
+var hour3PM= $("#3PM");
+var hour4PM = $("#4PM");
+var hour5PM = $("#5PM");
 
-//Variables
 var hourArray = [
     hour9AM,
     hour10AM,
@@ -24,9 +23,12 @@ var hourArray = [
     hour5PM
 ];
 
-//Use Moment.js to format the date at the top of the calendar
+updateTime();
+
+//Function to color code timeblocks based on time update
 function updateTime(){
 
+//Use Moment.js to format the date at the top of the calendar
 var todayIs = moment().format("dddd, MMMM Do, YYYY");
 $("#currentDay").text(todayIs);
 
@@ -46,3 +48,4 @@ for (let i =0; i < hourArray.length;i++){
     }
 }
 }
+
