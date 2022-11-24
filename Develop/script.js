@@ -50,7 +50,7 @@ for (let i =0; i < hourArray.length;i++){
 }
 
 //Saving content in the textarea of a timeblock 
-
+renderDetails();
 //Function for rendering textarea details saved in local storage
 function renderDetails(){
     for(el of hourArray){
