@@ -37,10 +37,10 @@ var ppf = moment().format("kk");
 for (let i =0; i < hourArray.length;i++){
     hourArray[i].removeClass("past present future");
 
-    if (ppf > hourArray[i].data("hour")){
+    if (ppf > hourArray[i].attr("data-hour")){
         hourArray[i].addClass("past");
 
-    } else if(ppf === hourArray[i].data("hour")){
+    } else if(ppf === hourArray[i].attr("data-hour")){
         hourArray[i].addClass("present");
 
     }else{
@@ -48,16 +48,15 @@ for (let i =0; i < hourArray.length;i++){
     }
 }
 }
-
 //Saving content in the textarea of a timeblock 
 renderDetails();
+
 //Function for rendering textarea details saved in local storage
 function renderDetails(){
     for(el of hourArray){
         el.val(localStorage.getItem("timeblock " + el.data("hour")));
     }
 }
-
 //Function for clicking the save button
 function saveCalendar(event) {
     event.preventDefault();
