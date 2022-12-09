@@ -16,4 +16,4 @@ The following image shows the Work Day Scheduler appearance and functionality:
 
 ## Link
 
-https://swaguespack.github.io/05-challenge-Work-Day-Scheduler/
+https://swaguespack.github.io/Shellbys-Work-Day-Scheduler/
